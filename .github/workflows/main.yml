@@ -1,20 +1,27 @@
 name: Deploy
 
+
+
 on:
   push:
     branches:
       - main # Set a branch to deploy when pushed
+    
+
 
 jobs:
+
   deploy:
     runs-on: ubuntu-latest
+
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Install
         run: npm install
-        working-directory: ../../../hazi-feladat/webapp
+        
         
       - name: Run Typecheck
         run: npm run typecheck
@@ -30,3 +37,4 @@ jobs:
         with:
           push: true
           tags: rob6723/my-image:latest
+
