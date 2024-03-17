@@ -34,5 +34,5 @@ jobs:
         with:
           push: true
           tags: rob6723/my-image:latest
-          path: ./hazi-feladat/webapp
+          path: webapp
 
