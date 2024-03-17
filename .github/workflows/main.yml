@@ -34,7 +34,7 @@ jobs:
         with:
           push: true
           tags: rob6723/my-image:latest
-          working-directory: webapp
+          context: webapp
           
           
       
