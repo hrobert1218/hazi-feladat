@@ -14,7 +14,11 @@ jobs:
 
       - name: Install
         run: npm install
+
         working-directory: hazi-feladat/webapp
+
+
+      
 
       - name: Run Typecheck
         run: npm run typecheck
