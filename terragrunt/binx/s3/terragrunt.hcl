@@ -3,7 +3,7 @@ include "provider" {
 }
 
 terraform {
-  source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git//.?ref=v4.16.1"
+  source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git//.?ref=v4.1.1"
 }
 
 locals {
@@ -12,13 +12,13 @@ locals {
 }
 
 inputs = {
-  bucket = "${var.env_name}-hazi-bucket"
+  bucket = "${local.env_name}-hazi-bucket"
   acl    = "private"
 
   control_object_ownership = true
   object_ownership         = "ObjectWriter"
 
   versioning = {
-    enabled = 2
+    enabled = true
   }
 }
